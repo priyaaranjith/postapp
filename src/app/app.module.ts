@@ -7,6 +7,16 @@ import { AddPostComponent } from './add-post/add-post.component';
 import { ViewPostComponent } from './view-post/view-post.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RouterModule, Routes } from '@angular/router';
+const myRoute : Routes =[
+  {
+    path:"",
+    component:ViewPostComponent
+  },
+  {
+    path:"addpost",
+    component:AddPostComponent
+  }
+]
 
 
 @NgModule({
@@ -18,7 +28,8 @@ import { RouterModule, Routes } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
     
   ],
   providers: [],
